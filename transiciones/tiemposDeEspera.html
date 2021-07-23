@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul
+        {
+            list-style: none;
+        }
+
+        a
+        {
+            text-decoration: none;
+        }
+
+        section
+        {
+            width: 400px;
+            height: min-content;
+        }
+
+        .nav
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav li ul
+        {
+            display: block;
+            visibility: hidden;
+            position: absolute;
+            transition: visibility 400ms;
+            transition-delay: 200ms;
+        }
+
+        .nav li:hover > ul
+        {
+            visibility: visible;
+            transition: visibility 400ms;
+            transition-delay: 200ms;
+        }
+
+        .nav li ul li
+        {
+            position: relative;
+            right: -50px;
+            top: 20px;
+            margin-top: 5px;
+        }
+
+        .nav li ul > li a:hover
+        {
+            background-color: #333;
+            display: block;
+            text-align: center;
+            width: 100px;
+            height: 20px;
+            color: white;
+            border-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <ul class="nav">
+            <li><a href="/">Mujer</a>
+                <ul>
+                    <li><a href="/">Camisetas</a></li>
+                    <li><a href="/">Pantalones</a></li>
+                    <li><a href="/">Accesorios</a>
+                        <ul>
+                            <li><a href="/">Relojes</a></li>
+                            <li><a href="/">Collares</a></li>
+                            <li><a href="">Aretes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/">Hombre</a></li>
+            <li><a href="/">Nenes</a></li>
+        </ul>
+    </section>
+</body>
+</html>
